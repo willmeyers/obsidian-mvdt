@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /*Fonts*/
 :root {
     /*
@@ -5,7 +7,7 @@
     it will go down the list until it finds on that is.
     */
 
-    --default-font: "Inter", sans-serif; /*Note and Settings Text*/
+    --default-font: "Work Sans", sans-serif; /*Note and Settings Text*/
     --font-monospace: "Source Code Pro", monospace; /*Code block text*/
 
     /*
@@ -18,17 +20,17 @@
 /*Dark Theme Variables*/
 .theme-dark {
     --background-modifier-cover: rgba(0, 0, 0, 0.8); /*Obsidian Title Bar Bg*/
-    --background-primary: #202020; /*Note background*/
-    --background-primary-alt: #1a1a1a; /*Note Title background active*/
-    --background-secondary: #161616; /*Sidebar background*/
+    --background-primary: #000000; /*Note background*/
+    --background-primary-alt: #121212; /*Note Title background active*/
+    --background-secondary: #000000; /*Sidebar background*/
     --background-secondary-alt: #000000; /*Sidebar Title background*/
     
     --background-modifier-border: #333; /*Border outline of quotes, tables, line breaks*/
     
-    --text-normal: #dcddde; /*Text body of note*/
+    --text-normal: #f4f4f4; /*Text body of note*/
     --text-muted: ; /*Text darker for sidebar, toggles, inactive, tags, etc*/
-    --text-accent: #7f6df2; /*Links*/
-    --text-accent-hover: #8875ff; /*Links hover*/
+    --text-accent: #ffffff; /*Links*/
+    --text-accent-hover: #f8f8f8; /*Links hover*/
     --text-faint: #666; /*Link brackets color & Gutter Numbers*/
 
     --text-highlight-bg: rgba(255, 255, 0, 0.4); /*Search Matches*/
@@ -37,12 +39,14 @@
 
     --interactive-normal: #2a2a2a; /*Button Color*/
     --interactive-hover: #303030; /*Button Hovered Color*/
-    --interactive-accent: #483699; /*Workspace Note Title Underline*/
-    --interactive-accent-hover: #4d3ca6; /*Menu Button Hover*/
+    --interactive-accent: #7b6cd9; /*Workspace Note Title Underline*/
+    --interactive-accent-hover: #2a2a2a; /*Menu Button Hover*/
     
     --scrollbar-bg: rgba(255, 255, 255, 0.05); /*Scrollbar Gutter Background*/
     --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1); /*Scrollbar Color*/
     --scrollbar-active-thumb-bg: rgba(255, 255, 255, 0.2); /*Scrollbar Dragged Color*/
+
+    --modal-border: #f4f4f4;
 }
 
 .theme-light {
@@ -71,6 +75,8 @@
     --scrollbar-bg: rgba(0, 0, 0, 0.05); /*Scrollbar Gutter Background*/
     --scrollbar-thumb-bg: rgba(0, 0, 0, 0.1); /*Scrollbar Color*/
     --scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.2); /*Scrollbar Dragged Color*/
+
+    --modal-border: #000000;
 }
 
 /*Box Sizing Reset - this makes it easier to set any ::before and ::after pseudo-elements' dimensions,
@@ -98,7 +104,10 @@ since it includes any border and padding into the height and width values you se
 
 /*----Settings----*/
 /*All Popup Windows: Settings*/
-.modal {}
+.modal {
+    border: 1px solid var(--modal-border);
+    box-shadow: 0px 3px 0px var(--modal-border);
+}
 
 /*Command Palette & Quick Switcher*/
 .prompt {}
@@ -122,7 +131,9 @@ since it includes any border and padding into the height and width values you se
 /*--Extras--*/
 
 /*Tooltip Popup*/
-.tooltip {}
+.tooltip {
+    
+}
 
 
 
@@ -149,7 +160,8 @@ since it includes any border and padding into the height and width values you se
 .nav-folder-title {}
 
 /*Files*/
-.nav-file {}
+.nav-file {
+}
 .nav-file-title {}
 /* (also applies to many plugins displaying file lists in the side bar) */
 
@@ -205,7 +217,8 @@ button.mod-warning{}
 
 /*Active Note Titlebar*/
 /*Note Title Bar: Text*/
-.workspace-leaf.mod-active .view-header-title {}
+.workspace-leaf.mod-active .view-header-title {color: #333333}
+.workspace-leaf.mod-active .view-header-title:focus {color: #ffffff}
 
 /*Note Title Bar: Note Icon*/
 .workspace-leaf.mod-active .view-header-icon {}
